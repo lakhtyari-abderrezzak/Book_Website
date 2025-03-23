@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('category_id');
             $table->string('title');
             $table->string('author');
             $table->date('edition');
