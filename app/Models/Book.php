@@ -11,4 +11,9 @@ class Book extends Model
     protected $fillable = [
         'title', 'author', 'edition', 'img_path', 'featured'
     ];
+
+    public function Category()
+    {
+        $this->belongsTo(Category::class);
+    }
 }
