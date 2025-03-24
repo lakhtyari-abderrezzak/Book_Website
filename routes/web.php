@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\HomeController;
 use App\Livewire\BookList;
@@ -23,5 +24,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('settings/password', Password::class)->name('settings.password');
     Route::get('settings/appearance', Appearance::class)->name('settings.appearance');
 });
+
+Route::get('/about', [AboutController::class, 'index'])->name('about');
+Route::view('/contact', 'contact');
 
 require __DIR__.'/auth.php';
