@@ -33,24 +33,12 @@
                     </path>
                 </svg>
             </button>
-
-            <!-- Desktop Navigation Links -->
-            <ul class="hidden md:flex space-x-6">
-                <li><a href="/" class="hover:text-yellow-400">Home</a></li>
-                <li><a href="/books" class="hover:text-yellow-400">Books</a></li>
-                <li><a href="/about" class="hover:text-yellow-400">About</a></li>
-                <li><a href="/contact" class="hover:text-yellow-400">Contact</a></li>
-            </ul>
+            <x-nav class="hidden md:flex space-x-6" />
         </div>
 
         <!-- Mobile Dropdown Menu -->
         <div x-show="open" class="md:hidden bg-gray-800 text-white mt-2 rounded-lg shadow-lg">
-            <ul class="flex flex-col space-y-2 p-4">
-                <li><a href="/" class="block py-2 px-4 hover:bg-gray-700 rounded">Home</a></li>
-                <li><a href="/books" class="block py-2 px-4 hover:bg-gray-700 rounded">Books</a></li>
-                <li><a href="/about" class="block py-2 px-4 hover:bg-gray-700 rounded">About</a></li>
-                <li><a href="/contact" class="block py-2 px-4 hover:bg-gray-700 rounded">Contact</a></li>
-            </ul>
+          <x-nav class="flex flex-col space-y-2 p-4" />
         </div>
     </nav>
 
