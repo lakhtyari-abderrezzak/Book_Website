@@ -2,10 +2,14 @@
 
     <!-- Hero Section with Background Image -->
     <header class="relative bg-gray-900 text-white text-center py-24 flex flex-col items-center justify-center">
-        <div
-            class="absolute inset-0 bg-[url('https://source.unsplash.com/1600x900/?books,library')] bg-cover bg-center brightness-50">
-        </div>
-        <div class="relative z-10 px-6">
+
+        <div class="absolute inset-0 bg-cover bg-center brightness-50"
+        style="background-image: url('{{ asset('images/book.jpg') }}');">
+    </div>
+
+    <!-- Blur Overlay -->
+    <div class="absolute inset-0 backdrop-blur-sm bg-black/30"></div>
+           <div class="relative z-10 px-6">
             <h1 class="text-4xl font-bold">Discover Your Next Favorite Book</h1>
             <p class="mt-4 text-lg text-gray-300">Explore a vast collection of books, from classics to the latest
                 releases.</p>
@@ -54,7 +58,7 @@
         <h2 class="text-3xl font-bold">Join Our Community</h2>
         <p class="mt-2 text-lg text-gray-400">Stay updated with new releases, book recommendations, and exclusive
             content.</p>
-        <a href="/signup"
+        <a wire:navigate href="{{route('login')}}"
             class="mt-6 inline-block bg-blue-500 text-white px-6 py-2 rounded-lg font-semibold shadow-md hover:bg-blue-600 transition">
             Sign Up Now
         </a>
