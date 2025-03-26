@@ -8,7 +8,7 @@
             <h1 class="text-4xl font-bold">Discover Your Next Favorite Book</h1>
             <p class="mt-4 text-lg text-gray-300">Explore a vast collection of books, from classics to the latest
                 releases.</p>
-            <a href="/books"
+            <a wire:navigate href="/books"
                 class="mt-6 inline-block bg-blue-500 text-white px-6 py-2 rounded-lg font-semibold shadow-md hover:bg-blue-600 transition">Browse
                 Books</a>
         </div>
@@ -24,7 +24,7 @@
                         class="w-32 h-32 object-cover mx-auto rounded-full border-4 border-gray-700 shadow-md mb-4">
                     <h3 class="text-xl font-bold text-white">{{ $category->name }}</h3>
                     <p class="text-gray-400 mt-2">{{ Str::limit($category->description, 100) }}</p>
-                    <a href="/categories/{{ $category->slug }}"
+                    <a wire:navigate href="/categories/{{ $category->slug }}"
                         class="text-blue-400 mt-4 block hover:text-blue-300 transition">Explore →</a>
                 </div>
             @endforeach
@@ -69,7 +69,7 @@
         <h2 class="text-3xl font-bold">Join Our Community</h2>
         <p class="mt-2 text-lg text-gray-400">Stay updated with new releases, book recommendations, and exclusive
             content.</p>
-        <a href="/signup"
+        <a wire:navigate href="/login"
             class="mt-6 inline-block bg-blue-500 text-white px-6 py-2 rounded-lg font-semibold shadow-md hover:bg-blue-600 transition">Sign
             Up Now</a>
     </section>
