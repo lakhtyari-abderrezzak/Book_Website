@@ -13,7 +13,7 @@
             <h1 class="text-4xl font-bold">Discover Your Next Favorite Book</h1>
             <p class="mt-4 text-lg text-gray-300">Explore a vast collection of books, from classics to the latest
                 releases.</p>
-            <a href="/books"
+            <a href="/books" wire:navigate
                 class="mt-6 inline-block bg-blue-500 text-white px-6 py-2 rounded-lg font-semibold shadow-md hover:bg-blue-600 transition">
                 Browse Books
             </a>
