@@ -14,6 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
     @vite('resources/css/app.css')
+    @livewireStyles
 </head>
 
 <body class="bg-black/90">
@@ -52,6 +53,7 @@
         &copy; 2025 Book Haven. All rights reserved.
     </footer>
 
+    @livewireScripts
 </body>
 
 </html>
