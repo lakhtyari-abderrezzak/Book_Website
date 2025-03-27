@@ -13,15 +13,16 @@ return new class extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('category_id');
+            $table->foreignId('category_id')->constrained()->cascadeOnDelete();
             $table->string('title');
             $table->string('author');
-            $table->date('edition');
-            $table->string('img_path');
-            $table->boolean('featured');
+            $table->year('edition');
+            $table->string('img_path')->nullable();
+            $table->boolean('featured')->default(false);
             $table->timestamps();
         });
     }
+    
 
     /**
      * Reverse the migrations.
