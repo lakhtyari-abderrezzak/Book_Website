@@ -47,31 +47,7 @@
             </div>
 
             <!-- Contact Form -->
-            <div class="bg-gray-800 p-6 shadow-lg rounded-lg text-white">
-                <h2 class="text-3xl font-semibold mb-4">Send Us a Message</h2>
-                <form action="" method="POST" class="space-y-4">
-                
-                    <div>
-                        <label for="name" class="block text-gray-300">Full Name</label>
-                        <input type="text" id="name" wire:model="name" required
-                            class="w-full p-3 bg-gray-900 text-white rounded-lg border border-gray-700 focus:border-blue-400 focus:ring focus:ring-blue-400">
-                    </div>
-                    <div>
-                        <label for="email" class="block text-gray-300">Email Address</label>
-                        <input type="email" id="email" wire:model="email" required
-                            class="w-full p-3 bg-gray-900 text-white rounded-lg border border-gray-700 focus:border-blue-400 focus:ring focus:ring-blue-400">
-                    </div>
-                    <div>
-                        <label for="message" class="block text-gray-300">Your Message</label>
-                        <textarea id="message" wire:model="message" rows="4" required
-                            class="w-full p-3 bg-gray-900 text-white rounded-lg border border-gray-700 focus:border-blue-400 focus:ring focus:ring-blue-400"></textarea>
-                    </div>
-                    <button type="submit"
-                        class="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold shadow-md hover:bg-blue-600 transition">
-                        Send Message
-                    </button>
-                </form>
-            </div>
+            <livewire:contact-us />
         </div>
     </section>
 
