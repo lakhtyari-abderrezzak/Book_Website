@@ -17,7 +17,8 @@
     @livewireStyles
 </head>
 
-<body class="bg-black/90">
+
+<body class="bg-black/90 flex flex-col min-h-screen">
 
 
 
@@ -46,8 +47,9 @@
 
 
 
-    {{ $slot }}
-
+    <div class="flex-grow">
+        {{ $slot }}
+    </div>
 
     <footer class="text-center p-4 bg-gray-800 text-white mt-10">
         &copy; 2025 Book Haven. All rights reserved.
