@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Mail\BookMail;
+use App\Models\Contact;
 use Illuminate\Support\Facades\Mail;
 use Livewire\Component;
 
@@ -21,7 +22,13 @@ class ContactUs extends Component
     public function submitForm(){
         $this->validate();
 
-        Mail::to($this->email )->send(new BookMail($this->name, $this->email, $this->body));
+        Contact::create([
+            'name' => $this->name,
+            'email' => $this->email,
+            'body' => $this->body,
+        ]);
+
+        Mail::to($this->email )->queue(new BookMail($this->name, $this->email, $this->body));
 
         session()->flash('success', 'Your message has been sent successfully!');
 
