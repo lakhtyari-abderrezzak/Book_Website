@@ -26,6 +26,8 @@
                 <h3 class="text-lg sm:text-xl font-semibold text-white">{{ $book->title }}</h3>
                 <p class="text-gray-400 mt-1">Author: {{ $book->author }}</p>
                 <p class="text-gray-500">Edition: {{ $book->edition }}</p>
+                <a wire:navigate href="{{ route('books.show', $book->id)}}"
+                    class="text-blue-400 mt-4 block hover:text-blue-300 transition">Explore →</a>
             </div>
             @endforeach
         </div>
