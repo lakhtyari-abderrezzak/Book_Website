@@ -24,7 +24,7 @@
                         class="w-32 h-32 object-cover mx-auto rounded-full border-4 border-gray-700 shadow-md mb-4">
                     <h3 class="text-xl font-bold text-white">{{ $category->name }}</h3>
                     <p class="text-gray-400 mt-2">{{ Str::limit($category->description, 100) }}</p>
-                    <a wire:navigate href="/categories/{{ $category->slug }}"
+                    <a wire:navigate href="{{ route('categories.show', $category->id)}}"
                         class="text-blue-400 mt-4 block hover:text-blue-300 transition">Explore →</a>
                 </div>
             @endforeach
@@ -35,19 +35,13 @@
     <section class="bg-gray-950 text-white py-16 mt-12">
         <h2 class="text-3xl font-semibold text-center text-gray-200 mb-6">What Our Readers Say</h2>
         <div class="flex justify-center gap-10">
-            {{-- @foreach ($testimonials as $testimonial) --}}
+            @foreach ($testimonials as $testimonial)
             <div class="bg-gray-800 p-6 shadow-lg rounded-lg max-w-xs text-center">
-                <p class="text-gray-300 italic">" Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-                    temporibus nemo aspernatur porro."</p>
-                <h3 class="text-xl font-bold mt-4 text-white">Reader Name</h3>
+                <p class="text-gray-300 italic">"{{ $testimonial->body }}"</p>
+                <h3 class="text-xl font-bold mt-4 text-white">{{ $testimonial->name }}</h3>
                 <p class="text-gray-400 text-sm">Ireland, Europe</p>
-            </div>
-            {{-- <div class="bg-gray-800 p-6 shadow-lg rounded-lg max-w-xs text-center">
-                <p class="text-gray-300 italic">"{{ $testimonial->content }}"</p>
-                <h3 class="text-xl font-bold mt-4 text-white">{{ $testimonial->reader_name }}</h3>
-                <p class="text-gray-400 text-sm">{{ $testimonial->location }}</p>
-            </div> --}}
-            {{-- @endforeach --}}
+            </div> 
+            @endforeach
         </div>
     </section>
 
@@ -55,12 +49,12 @@
     <section class="container mx-auto mt-10 p-6">
         <h2 class="text-3xl font-semibold text-center text-gray-200 mb-6">Fun Book Facts</h2>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {{-- @foreach ($bookFacts as $fact)
+           @foreach ($bookFacts as $fact)
                 <div class="bg-gray-800 p-6 shadow-lg rounded-lg hover:shadow-xl transition text-center">
                     <h3 class="text-xl font-bold text-white">Did You Know?</h3>
-                    <p class="text-gray-400 mt-4">{{ $fact->fact }}</p>
+                    <p class="text-gray-400 mt-4">{{ $fact->fun_facts}}</p>
                 </div>
-            @endforeach --}}
+            @endforeach
         </div>
     </section>
 
