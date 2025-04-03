@@ -3,11 +3,11 @@
 namespace App\Livewire;
 
 use App\Models\Book;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class BookList extends Component
 {
-    public $name = 'Guest';
 
     public $search = '';
     public function delete(Book $book)
@@ -18,7 +18,7 @@ class BookList extends Component
     {
         $books = Book::where('title', 'like', "%{$this->search}%")
                         ->orWhere('author', 'like', "%{$this->search}%")
-                        ->orderBy('title')->get();
+                        ->orderBy('title')->paginate(16);
         return view('livewire.book-list', ['books' => $books]);
     }
 }
