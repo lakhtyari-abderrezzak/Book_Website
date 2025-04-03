@@ -12,10 +12,7 @@ use App\Models\Book;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomeController::class)->name('home');
-Route::view('dashboard', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
-    
+
 Route::get('books', [BookController::class , 'index'])->name('books.index');
 Route::get('books/{id}', [BookController::class , 'show'])->name('books.show');
 
