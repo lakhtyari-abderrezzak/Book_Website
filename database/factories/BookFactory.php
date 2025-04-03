@@ -21,7 +21,7 @@ class BookFactory extends Factory
             'category_id' => Category::factory(),
             'title' => $this->faker->sentence(2),
             'author' =>  $this->faker->name(),
-            'edition' =>  $this->faker->year(),
+            'edition' =>  $this->faker->date(),
             'img_path' => $this->faker->imageUrl(),
             'featured' => $this->faker->boolean(),
         ];
