@@ -28,7 +28,7 @@
             <!-- Sample Book Card -->
             @foreach ($featuredBooks as $book)
                 <div class="bg-gray-800 p-4 shadow-lg rounded-lg hover:shadow-xl transition">
-                    <img src="{{ $book->img_path }}" alt="Book Cover" class="w-full rounded">
+                    <img src="{{ asset('storage/' . $book->img_path) }}" alt="Book Cover" class="w-full rounded">
                     <h3 class="text-xl font-bold mt-3 text-white">{{ $book->title }}</h3>
                     <p class="text-gray-400">{{ $book->author }}</p>
                     <a href="#" class="text-blue-400 font-semibold mt-2 inline-block hover:text-blue-300 transition">Read More →</a>
@@ -44,7 +44,7 @@
             <!-- Sample Book Card -->
             @foreach ($latestBooks as $book)
                 <div class="bg-gray-800 p-4 shadow-lg rounded-lg hover:shadow-xl transition">
-                    <img src="{{ $book->img_path }}" alt="Book Cover" class="w-full rounded">
+                    <img src="{{ asset('storage/' . $book->img_path) }}" alt="Book Cover" class="w-full rounded">
                     <h3 class="text-xl font-bold mt-3 text-white">{{ $book->title }}</h3>
                     <p class="text-gray-400">{{ $book->author }}</p>
                     <a href="#" class="text-blue-400 font-semibold mt-2 inline-block hover:text-blue-300 transition">Read More →</a>
