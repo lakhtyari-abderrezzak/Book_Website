@@ -20,7 +20,7 @@
         <div class="grid md:grid-cols-3 gap-6">
             @foreach ($categories as $category)
                 <div class="bg-gray-800 p-6 shadow-lg rounded-lg hover:shadow-xl transition text-center">
-                    <img src="{{ asset('images/categories/' . $category->image) }}" alt="{{ $category->name }} Image"
+                    <img src="{{ asset('storage/' . $category->img_path) }}" alt="{{ $category->name }} Image"
                         class="w-32 h-32 object-cover mx-auto rounded-full border-4 border-gray-700 shadow-md mb-4">
                     <h3 class="text-xl font-bold text-white">{{ $category->name }}</h3>
                     <p class="text-gray-400 mt-2">{{ Str::limit($category->description, 100) }}</p>
