@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('category_id')->constrained()->cascadeOnDelete();
             $table->string('title');
             $table->string('author');
-            $table->year('edition');
+            $table->date('edition');
             $table->string('img_path')->nullable();
             $table->boolean('featured')->default(false);
             $table->timestamps();
