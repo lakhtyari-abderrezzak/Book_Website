@@ -12,7 +12,7 @@ class Category extends Model
 
     protected $fillable = [
         'name', 
-        'decription',
+        'body',
         'img_path'
     ];
 
