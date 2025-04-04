@@ -28,9 +28,7 @@ class CategoryResource extends Resource
                     ->required()
                     ->maxLength(255),
                 
-                Textarea::make('description')
-                    ->nullable()
-                    ->columnSpanFull(),
+                Textarea::make('body'),
                 
                 FileUpload::make('img_path')
                     ->nullable()
@@ -48,7 +46,7 @@ class CategoryResource extends Resource
                     ->searchable()
                     ->sortable(),
                 
-                TextColumn::make('description')
+                TextColumn::make('body')
                     ->label('Description')
                     ->limit(50),
                 
