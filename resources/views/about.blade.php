@@ -23,7 +23,7 @@
                     <img src="{{ asset('storage/' . $category->img_path) }}" alt="{{ $category->name }} Image"
                         class="w-32 h-32 object-cover mx-auto rounded-full border-4 border-gray-700 shadow-md mb-4">
                     <h3 class="text-xl font-bold text-white">{{ $category->name }}</h3>
-                    <p class="text-gray-400 mt-2">{{ Str::limit($category->description, 100) }}</p>
+                    <p class="text-gray-400 mt-2">{{ Str::limit($category->body, 100) }}</p>
                     <a wire:navigate href="{{ route('categories.show', $category->id)}}"
                         class="text-blue-400 mt-4 block hover:text-blue-300 transition">Explore →</a>
                 </div>
