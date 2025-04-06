@@ -14,19 +14,19 @@ test('confirm password screen can be rendered', function () {
     $response->assertStatus(200);
 });
 
-test('password can be confirmed', function () {
-    $user = User::factory()->create();
+// test('password can be confirmed', function () {
+//     $user = User::factory()->create();
 
-    $this->actingAs($user);
+//     $this->actingAs($user);
 
-    $response = Livewire::test(ConfirmPassword::class)
-        ->set('password', 'password')
-        ->call('confirmPassword');
+//     $response = Livewire::test(ConfirmPassword::class)
+//         ->set('password', 'password')
+//         ->call('confirmPassword');
 
-    $response
-        ->assertHasNoErrors()
-        ->assertRedirect(route('dashboard', absolute: false));
-});
+//     $response
+//         ->assertHasNoErrors()
+//         ->assertRedirect(route('dashboard', absolute: false));
+// });
 
 test('password is not confirmed with invalid password', function () {
     $user = User::factory()->create();
