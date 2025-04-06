@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('author');
             $table->date('edition');
+            $table->text('description')->nullable();           
             $table->string('img_path')->nullable();
             $table->boolean('featured')->default(false);
             $table->timestamps();
