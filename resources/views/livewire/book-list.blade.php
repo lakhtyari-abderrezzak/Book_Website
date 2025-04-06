@@ -21,11 +21,12 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             @foreach ($books as $book)
             <div class="bg-gray-800 p-4 rounded-lg shadow-lg text-gray-300">
-                <img src="{{ asset('storage/' . $book->img_path) }}" alt="Book Cover" class="w-full rounded">
+                <img src="{{ $book->img_path }}" alt="Book Cover" class="w-full rounded">
 
                 <h3 class="text-lg sm:text-xl font-semibold text-white">{{ $book->title }}</h3>
                 <p class="text-gray-400 mt-1">Author: {{ $book->author }}</p>
-                <p class="text-gray-500">Edition: {{ $book->edition }}</p>
+                <p class="text-gray-300 mt-2 line-clamp-3">{{ $book->description }}</p>
+                <p class="text-gray-500 mt-2">Edition: {{ \Carbon\Carbon::parse($book->edition)->format('Y') }}</p>
                 <a wire:navigate href="{{ route('books.show', $book->id)}}"
                     class="text-blue-400 mt-4 block hover:text-blue-300 transition">Explore →</a>
             </div>
