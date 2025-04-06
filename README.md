@@ -1,17 +1,17 @@
 # 📚 Book Website
 
-A modern Laravel web app that showcases popular books with clean UI, dynamic pages, and Livewire interactivity. Built with Laravel, Livewire, and Filament.
+A modern Laravel web app that showcases popular books with a clean UI, dynamic pages, and Livewire interactivity. Built with Laravel, Livewire, and Filament.
 
 ---
 
 ## ✨ Features
 
-- 📖 Book list and detail pages
-- ⚡ Livewire-powered UI
-- 🎨 Admin panel with Filament
-- 🖼️ Dynamic image accessor (local or remote)
+- 📖 Browse book lists and detailed pages
+- ⚡ Interactive Livewire-powered UI
+- 🎨 Admin panel built with Filament
+- 🖼️ Dynamic image handling (local or remote)
 - 📄 Static pages: About & Contact
-- ✅ Pest feature + unit tests
+- ✅ Comprehensive tests with Pest PHP
 
 ---
 
@@ -32,58 +32,63 @@ php artisan storage:link
 
 npm run dev
 php artisan serve
+```
 
+---
 
 ## 🧪 Testing
 
-Uses [Pest PHP](https://pestphp.com/) for clean, expressive testing.
+This project uses [Pest PHP](https://pestphp.com/) for clean and expressive testing.
 
 ```bash
 php artisan test
+```
 
 ### ✅ Test Coverage
 
 - Homepage (`/`)
 - `/books`, `/about`, `/contact`
 - 404 error pages
-- Accessors (e.g., `img_path`)
+- Image accessors (e.g., `img_path`)
 
+---
 
 ## 🛠️ Tech Stack
+
 - Laravel 12
-
 - Livewire
-
 - Filament
-
 - Blade
-
 - MySQL
+- Pest PHP
 
-- Pest
+---
 
 ## 🤝 Contributing
 
-We welcome contributions! Follow these simple steps:
+We welcome contributions! Follow these steps:
 
-1. **Fork & clone the repository**
+1. **Fork and clone the repository**
 
 2. **Create a new branch:**
 
-   ```bash
-   git checkout -b feature/your-feature
+    ```bash
+    git checkout -b feature/your-feature
+    ```
 
+3. **Submit a pull request**
+
+---
 
 ## 📬 Contact
 
 - **Email**: [Lakhtyari.01@gmail.com](mailto:Lakhtyari.01@gmail.com)
 - **GitHub**: [@lakhtyari-abderrezzak](https://github.com/lakhtyari-abderrezzak)
 
+---
 
-## License
+## 📜 License
 
-This project is currently not licensed. If you would like to contribute or discuss licensing options, please feel free to reach out.
+This project is currently not licensed. If you'd like to contribute or discuss licensing options, please feel free to reach out.
 
-We welcome collaboration and are open to discussing various licensing models to suit the needs of contributors.
-
-
+We welcome collaboration and are open to discussing licensing models to suit contributors' needs.
