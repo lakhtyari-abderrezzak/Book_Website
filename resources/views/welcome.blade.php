@@ -22,35 +22,51 @@
 
     <!-- Featured Books Section -->
     <section class="container mx-auto mt-10 p-6">
-        <h2 class="text-3xl font-semibold text-center text-gray-200 mb-6">Featured Books</h2>
+        <h2 class="text-3xl font-semibold text-center text-gray-200 mb-6 underline decoration-blue-500">Featured Books</h2>
 
         <div class="grid md:grid-cols-3 gap-6">
             <!-- Sample Book Card -->
             @foreach ($featuredBooks as $book)
                 <div class="bg-gray-800 p-4 shadow-lg rounded-lg hover:shadow-xl transition">
-                    <img src="{{ asset('storage/' . $book->img_path) }}" alt="Book Cover" class="w-full rounded">
+                    <img src="{{ $book->img_path }}" alt="Book Cover" class="w-full h-auto object-contain rounded">
                     <h3 class="text-xl font-bold mt-3 text-white">{{ $book->title }}</h3>
                     <p class="text-gray-400">{{ $book->author }}</p>
-                    <a href="#" class="text-blue-400 font-semibold mt-2 inline-block hover:text-blue-300 transition">Read More →</a>
+                    <p class="text-gray-300 mt-2 line-clamp-3">{{ $book->description }}</p>
+                    <p class="text-gray-500 mt-2">Edition: {{ \Carbon\Carbon::parse($book->edition)->format('Y') }}</p>
+                    <a href="/books/{{ $book->id }}" class="text-blue-400 font-semibold mt-2 inline-block hover:text-blue-300 transition">Read More →</a>
                 </div>
             @endforeach
         </div>
     </section>
     <!-- Latest Books Section -->
     <section class="container mx-auto mt-10 p-6">
-        <h2 class="text-3xl font-semibold text-center text-gray-200 mb-6">Latest Books</h2>
+        <h2 class="text-3xl font-semibold text-center text-gray-200 mb-6 underline decoration-blue-500">Latest Books</h2>
+        <p class="text-center text-gray-400 mb-6">Stay updated with the latest releases in the literary world.</p>
+        <div class="flex justify-center mb-6">
+            <a href="/books" wire:navigate
+                class="inline-block bg-blue-500 text-white px-6 py-2 rounded-lg font-semibold shadow-md hover:bg-blue-600 transition">
+                View All Books
+            </a>
+        </div>
 
         <div class="grid md:grid-cols-3 gap-6">
-            <!-- Sample Book Card -->
             @foreach ($latestBooks as $book)
                 <div class="bg-gray-800 p-4 shadow-lg rounded-lg hover:shadow-xl transition">
-                    <img src="{{ asset('storage/' . $book->img_path) }}" alt="Book Cover" class="w-full rounded">
+                    <img src="{{ $book->img_path }}" alt="Book Cover" class="w-full h-auto object-contain rounded">
+                    
                     <h3 class="text-xl font-bold mt-3 text-white">{{ $book->title }}</h3>
                     <p class="text-gray-400">{{ $book->author }}</p>
-                    <a href="#" class="text-blue-400 font-semibold mt-2 inline-block hover:text-blue-300 transition">Read More →</a>
+        
+                    <p class="text-gray-300 mt-2 line-clamp-3">{{ $book->description }}</p>
+                    <p class="text-gray-500 mt-2">Edition: {{ \Carbon\Carbon::parse($book->edition)->format('Y') }}</p>
+        
+                    <a href="/books/{{$book->id}}" class="text-blue-400 font-semibold mt-3 inline-block hover:text-blue-300 transition">
+                        Read More →
+                    </a>
                 </div>
             @endforeach
         </div>
+        
     </section>
 
     <!-- Call to Action -->
