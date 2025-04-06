@@ -46,6 +46,11 @@ class BookResource extends Resource
 
                 DatePicker::make('edition')
                     ->required(),
+                TextInput::make('description')
+                    ->label('Description')
+                    ->placeholder('Write a short description of the book')
+                    ->maxLength(500)
+                    ->columnSpanFull(),
 
                 FileUpload::make('img_path')
                     ->image()
@@ -75,6 +80,9 @@ class BookResource extends Resource
 
                 TextColumn::make('edition')
                     ->date()
+                    ->sortable(),
+                TextColumn::make('description')
+                    ->limit(50)
                     ->sortable(),
 
                 TextColumn::make('category.name')
