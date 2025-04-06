@@ -1,73 +1,89 @@
-# My Project
+# 📚 Book Website
 
-## Description
-A book website that showcases some of the most read books. It provides users with an engaging platform to explore popular titles, discover key details about each book, and find inspiration for their next read.
+A modern Laravel web app that showcases popular books with clean UI, dynamic pages, and Livewire interactivity. Built with Laravel, Livewire, and Filament.
 
-## Installation
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/lakhtyari-abderrezzak/Book_Website.git
-    ```
-2. Navigate to the project directory:
-    ```bash
-    cd Book_Website
-    ```
-3. Install dependencies using Composer:
-    ```bash
-    composer install
-    ```
-4. Set up the environment file:
-    ```bash
-    cp .env.example .env
-    ```
-5. Generate the application key:
-    ```bash
-    php artisan key:generate
-    ```
-6. Run database migrations:
-    ```bash
-    php artisan migrate
-    ```
-7. Create a symbolic link for storage:
-    ```bash
-    php artisan storage:link
-    ```
-8. Start the development server:
-    ```bash
-    php artisan serve
-    ```
-9. Compile assets using npm:
-    ```bash
-    npm run dev
-    ```
+---
 
-## Usage
-To start the development server and view the website locally, run the following command:
+## ✨ Features
+
+- 📖 Book list and detail pages
+- ⚡ Livewire-powered UI
+- 🎨 Admin panel with Filament
+- 🖼️ Dynamic image accessor (local or remote)
+- 📄 Static pages: About & Contact
+- ✅ Pest feature + unit tests
+
+---
+
+## 🚀 Installation
+
 ```bash
-php artisan serve
-```
-This project is built using Laravel, Livewire, and Filament, providing a robust and dynamic experience.
-```
+git clone https://github.com/lakhtyari-abderrezzak/Book_Website.git
+cd Book_Website
 
-## Contributing
-Contributions are welcome! Please follow these steps:
-1. Fork the repository.
-2. Create a new branch:
-    ```bash
-    git checkout -b feature-name
-    ```
-3. Commit your changes:
-    ```bash
-    git commit -m "Add feature-name"
-    ```
-4. Push to the branch:
-    ```bash
-    git push origin feature-name
-    ```
-5. Open a pull request.
+composer install
+npm install
+
+cp .env.example .env
+php artisan key:generate
+
+php artisan migrate
+php artisan storage:link
+
+npm run dev
+php artisan serve
+
+
+## 🧪 Testing
+
+Uses [Pest PHP](https://pestphp.com/) for clean, expressive testing.
+
+```bash
+php artisan test
+
+### ✅ Test Coverage
+
+- Homepage (`/`)
+- `/books`, `/about`, `/contact`
+- 404 error pages
+- Accessors (e.g., `img_path`)
+
+
+## 🛠️ Tech Stack
+- Laravel 12
+
+- Livewire
+
+- Filament
+
+- Blade
+
+- MySQL
+
+- Pest
+
+## 🤝 Contributing
+
+We welcome contributions! Follow these simple steps:
+
+1. **Fork & clone the repository**
+
+2. **Create a new branch:**
+
+   ```bash
+   git checkout -b feature/your-feature
+
+
+## 📬 Contact
+
+- **Email**: [Lakhtyari.01@gmail.com](mailto:Lakhtyari.01@gmail.com)
+- **GitHub**: [@lakhtyari-abderrezzak](https://github.com/lakhtyari-abderrezzak)
+
 
 ## License
-This project does not currently have a license. If you would like to contribute, please reach out to discuss licensing options.
 
-## Contact
-For questions or feedback, please contact [Lakhtyari.01@gmail.com].
+This project is currently not licensed. If you would like to contribute or discuss licensing options, please feel free to reach out.
+
+We welcome collaboration and are open to discussing various licensing models to suit the needs of contributors.
+
+
