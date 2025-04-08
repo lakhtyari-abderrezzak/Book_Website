@@ -21,10 +21,6 @@ class HomeController extends Controller
                 ->take(6)
                 ->get();
         });
-        return view('welcome',
-    [
-        'featuredBooks' => $featuredBooks,
-        'latestBooks' => $latestBooks
-    ]);
+        return view('welcome', compact('featuredBooks', 'latestBooks'));
     }
 }
