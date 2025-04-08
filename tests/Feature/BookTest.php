@@ -36,5 +36,15 @@ describe('Book pages', function () {
         $response->assertDontSee(__('pagination.previous'));
     });
  
+    test('getImgPathAttribute returns full asset URL for local paths', function () {
+        $this->app->make('url');
+    
+        $book = new Book([
+            'img_path' => 'images/book-cover.jpg',
+        ]);
+    
+        expect($book->img_path)
+            ->toBe(asset('storage/images/book-cover.jpg'));
+    });
     
 });
